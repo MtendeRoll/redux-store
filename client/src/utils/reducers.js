@@ -1,21 +1,17 @@
 import { useReducer } from "react";
-import {
-  UPDATE_PRODUCTS,
-  ADD_TO_CART,
-  UPDATE_CART_QUANTITY,
-  REMOVE_FROM_CART,
-  ADD_MULTIPLE_TO_CART,
-  UPDATE_CATEGORIES,
-  UPDATE_CURRENT_CATEGORY,
-  CLEAR_CART,
-  TOGGLE_CART,
-} from "./actions";
+import { UPDATE_PRODUCTS, ADD_TO_CART, UPDATE_CART_QUANTITY, REMOVE_FROM_CART, ADD_MULTIPLE_TO_CART, UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY, CLEAR_CART, TOGGLE_CART } from "./actions";
 
-// TODO: Create the intial state
-const initialState = {};
+//The intial state
+const initialState = {
+  products: [],
+  categories: [],
+  currentCategory: "",
+  cart: [],
+  cartOpen: false,
+};
 
-// TODO: Modify the reducer function to take in the initial state
-export const reducer = (state, action) => {
+//Modify the reducer function to take in the initial state
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
       return {
@@ -88,7 +84,5 @@ export const reducer = (state, action) => {
       return state;
   }
 };
-// TODO: Change the export to only the reducer to be used in store.js
-export function useProductReducer(initialState) {
-  return useReducer(reducer, initialState);
-}
+//Changed the export to only the reducer to be used in store.js
+export default reducers;
