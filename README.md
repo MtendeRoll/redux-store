@@ -45,8 +45,8 @@ GIVEN an e-commerce platform that uses Redux to manage global state
 
 ## Application Gif
 
-- Deployed Application
-  ![Deployed Application]()
+- Gif displaying were the redux changes were made
+  ![Deployed Application](./client/public/images/redux-hooks.gif)
 
 ## License
 
