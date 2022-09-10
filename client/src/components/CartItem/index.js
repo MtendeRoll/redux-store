@@ -1,10 +1,10 @@
 import React from "react";
-import { useStoreContext } from "../../utils/GlobalState";
+import { useDispatch } from "react-redux";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
 const CartItem = ({ item }) => {
-  const [, dispatch] = useStoreContext();
+  const dispatch = useDispatch();
 
   const removeFromCart = (item) => {
     dispatch({
@@ -43,17 +43,8 @@ const CartItem = ({ item }) => {
         </div>
         <div>
           <span>Qty:</span>
-          <input
-            type="number"
-            placeholder="1"
-            value={item.purchaseQuantity}
-            onChange={onChange}
-          />
-          <span
-            role="img"
-            aria-label="trash"
-            onClick={() => removeFromCart(item)}
-          >
+          <input type="number" placeholder="1" value={item.purchaseQuantity} onChange={onChange} />
+          <span role="img" aria-label="trash" onClick={() => removeFromCart(item)}>
             🗑️
           </span>
         </div>
