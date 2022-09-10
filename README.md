@@ -37,7 +37,7 @@ GIVEN an e-commerce platform that uses Redux to manage global state
 ## Links
 
 - [Github Repository](https://github.com/MtendeRoll/redux-store)
-- [Deployed Application](http://MtendeRoll.github.io/redux-store)
+- [Deployed Application](https://redux-store-roll.herokuapp.com/)
 
 ## Tools Used
 
